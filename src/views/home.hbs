@@ -1,6 +1,7 @@
 {{#if user}}
-<h3> Logged in as {{user.username}}</h3>
-<head>
+	{{!-- <h3> Logged in as {{user.username}}</h3> --}}
+
+	<head>
 		<title></title>
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
 		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title"
@@ -15,7 +16,7 @@
 						<h1>Pop Culture Generator</h1>
 					</section>
 				</div>
-			
+
 				<div id="right-col">
 					<div id="links">
 						<li><a href="/captions">Saved Captions</a></li>
@@ -28,6 +29,7 @@
 			<div id="content">
 				<h2>Generate a Caption from only One Word!</h2>
 				<div class="form-container">
+					<div>Logged in as {{user.username}}</div>
 					<p>
 						Caption Type:
 						<select id="filterType" name="type" class="type">
@@ -39,16 +41,17 @@
 					<p>Keyword: <input type="text" id="filterWord" name="word" class="word" maxlength=""></p>
 					<input onclick="keyword_input()" id="filterBtn" type="submit" value="Search">
 				</div>
-				<outputbutton class="anchor"onclick="doSomething()">{{caption}}</button>
-				<tbody>
-					<div id="messages"></div>
+				<outputbutton class="anchor" onclick="doSomething()">{{caption}}</button>
+					<tbody>
+						<div id="messages"></div>
 					</tbody>
 			</div>
 		</div>
 		<script src="js/main.js"></script>
 	</body>
 {{else}}
-<head>
+
+	<head>
 		<title></title>
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
 		<link rel="stylesheet" href="stylesheets/style.css" type="text/css" media="screen" title="no title"
@@ -88,10 +91,10 @@
 					<p>Keyword: <input type="text" id="filterWord" name="word" class="word" maxlength=""></p>
 					<input onclick="keyword_input()" id="filterBtn" type="submit" value="Search">
 				</div>
-				
+
 				<tbody>
 					<div id="messages"></div>
-					</tbody>
+				</tbody>
 			</div>
 		</div>
 		<script src="js/main.js"></script>
